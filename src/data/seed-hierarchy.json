@@ -1,0 +1,239 @@
+{
+  "fleets": [
+    {
+      "id": "fleet-1",
+      "name": "Global Tanker Fleet",
+      "groups": [
+        {
+          "id": "group-1",
+          "name": "Division A",
+          "vessels": [
+            {
+              "id": "vessel-1-1",
+              "name": "MT Sagar Kanya",
+              "status": "Active",
+              "fuel": "91%",
+              "speed": "17.8 kn",
+              "maintenance": [
+                {
+                  "id": "m-1-1-0",
+                  "title": "Deck Repainting",
+                  "status": "In Progress",
+                  "priority": "High",
+                  "dueDate": "2026-02-15"
+                }
+              ],
+              "inventory": [],
+              "runningHours": [],
+              "hierarchy": {
+                "id": "root-1-1",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": [
+                  {
+                    "id": "eng-1-1",
+                    "name": "Propulsion System",
+                    "type": "equipment",
+                    "children": [
+                      {
+                        "id": "cyl-1-1",
+                        "name": "Cylinder Block",
+                        "type": "assembly",
+                        "children": [
+                          {
+                            "id": "piston-1-1",
+                            "name": "Piston Unit",
+                            "type": "component"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "group-19",
+          "name": "Division B (Expansion)",
+          "vessels": [
+            {
+              "id": "v-ex-1",
+              "name": "MT Bharat",
+              "status": "Active",
+              "fuel": "80%",
+              "speed": "15kn",
+              "hierarchy": {
+                "id": "r-ex",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": []
+              }
+            },
+            {
+              "id": "v-ex-2",
+              "name": "MT Shakti",
+              "status": "Active",
+              "fuel": "75%",
+              "speed": "14kn",
+              "hierarchy": {
+                "id": "r-ex2",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": []
+              }
+            }
+          ]
+        },
+        {
+          "id": "group-empty",
+          "name": "Static Reserve (0 Vessels)",
+          "vessels": []
+        }
+      ]
+    },
+    {
+      "id": "fleet-stress",
+      "name": "Mega Logistics (Massive Data)",
+      "groups": [
+        { "id": "g-s-1", "name": "North Atlantic", "vessels": [] },
+        { "id": "g-s-2", "name": "Pacific Hub", "vessels": [] },
+        { "id": "g-s-3", "name": "Indian Ocean", "vessels": [] },
+        { "id": "g-s-4", "name": "Arctic Route", "vessels": [] },
+        { "id": "g-s-5", "name": "Southern Cross", "vessels": [] },
+        { "id": "g-s-6", "name": "Deep Sea", "vessels": [] },
+        {
+          "id": "g-s-high",
+          "name": "Bulk Carrier Division (High Volume)",
+          "vessels": [
+            {
+              "id": "vs-1",
+              "name": "Titan 1",
+              "status": "Active",
+              "hierarchy": {
+                "id": "ts1",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": []
+              }
+            },
+            {
+              "id": "vs-2",
+              "name": "Titan 2",
+              "status": "Active",
+              "hierarchy": {
+                "id": "ts2",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": []
+              }
+            },
+            {
+              "id": "vs-3",
+              "name": "Titan 3",
+              "status": "Active",
+              "hierarchy": {
+                "id": "ts3",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": []
+              }
+            },
+            {
+              "id": "vs-4",
+              "name": "Titan 4",
+              "status": "Active",
+              "hierarchy": {
+                "id": "ts4",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": []
+              }
+            },
+            {
+              "id": "vs-5",
+              "name": "Titan 5",
+              "status": "Active",
+              "hierarchy": {
+                "id": "ts5",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": []
+              }
+            },
+            {
+              "id": "vs-6",
+              "name": "Titan 6",
+              "status": "Active",
+              "hierarchy": {
+                "id": "ts6",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": []
+              }
+            },
+            {
+              "id": "vs-7",
+              "name": "Titan 7",
+              "status": "Active",
+              "hierarchy": {
+                "id": "ts7",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": []
+              }
+            },
+            {
+              "id": "vs-8",
+              "name": "Titan 8",
+              "status": "Active",
+              "hierarchy": {
+                "id": "ts8",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": []
+              }
+            },
+            {
+              "id": "vs-9",
+              "name": "Titan 9",
+              "status": "Active",
+              "hierarchy": {
+                "id": "ts9",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": []
+              }
+            },
+            {
+              "id": "vs-10",
+              "name": "Titan 10",
+              "status": "Active",
+              "hierarchy": {
+                "id": "ts10",
+                "name": "Equipments",
+                "type": "equipmentType",
+                "children": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fleet-empty",
+      "name": "New Ventures (0 Divisions)",
+      "groups": []
+    }
+  ],
+  "users": [
+    {
+      "id": "u1",
+      "name": "Capt. James Cook",
+      "role": "Fleet Master",
+      "status": "Online"
+    },
+    { "id": "u2", "name": "Elena Fisher", "role": "CFO", "status": "Offline" }
+  ]
+}
