@@ -20,6 +20,65 @@ export interface TreeState {
   panOffset: { x: number; y: number };
 }
 
+export interface MaintenanceItem {
+  id: string;
+  title: string;
+  status: string;
+  priority: string;
+  dueDate: string;
+}
+
+export interface InventoryItem {
+  id: string;
+  name: string;
+  qty: number;
+  min: number;
+  unit: string;
+  location: string;
+}
+
+export interface RunningHoursItem {
+  id: string;
+  component: string;
+  current: number;
+  max: number;
+  status: string;
+}
+
+export interface Vessel {
+  id: string;
+  name: string;
+  status: string;
+  fuel: string;
+  speed: string;
+  maintenance: MaintenanceItem[];
+  inventory: InventoryItem[];
+  runningHours: RunningHoursItem[];
+  hierarchy: TreeNode;
+}
+
+export interface Group {
+  id: string;
+  name: string;
+  vessels: Vessel[];
+}
+
+export interface Fleet {
+  id: string;
+  name: string;
+  groups: Group[];
+}
+
+export interface SeedData {
+  fleets: Fleet[];
+  users: {
+    id: string;
+    name: string;
+    role: string;
+    status: string;
+  }[];
+}
+
 export interface TreePath {
   id: string;
   name: string;

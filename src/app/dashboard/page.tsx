@@ -7,10 +7,14 @@ import { TreeView } from "@/components/tree/TreeView";
 import { FleetSelector } from "@/components/dashboard/FleetSelector";
 import { GroupSelector } from "@/components/dashboard/GroupSelector";
 import seedHierarchy from "@/data/seed-hierarchy.json";
-import { TreeNode } from "@/types";
+import type { Fleet, Group, SeedData, TreeNode, Vessel } from "@/types";
 import { useBreadcrumbs } from "@/components/providers/BreadcrumbProvider";
 
-export default function Home() {
+const data = seedHierarchy as unknown as SeedData;
+
+import { Suspense, useCallback } from "react";
+
+function DashboardContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { setBreadcrumbs } = useBreadcrumbs();
@@ -26,18 +30,33 @@ export default function Home() {
   }, [fleetId, vesselId]);
 
   const selectedFleet = useMemo(
-    () => seedHierarchy.fleets.find((f) => f.id === fleetId),
+    () => data.fleets.find((f: Fleet) => f.id === fleetId),
     [fleetId],
   );
 
   const selectedGroup = useMemo(
-    () => selectedFleet?.groups.find((g) => g.id === groupId),
+    () => selectedFleet?.groups.find((g: Group) => g.id === groupId),
     [selectedFleet, groupId],
   );
 
   const selectedVessel = useMemo(
-    () => selectedGroup?.vessels.find((v) => v.id === vesselId),
+    () => selectedGroup?.vessels.find((v: Vessel) => v.id === vesselId),
     [selectedGroup, vesselId],
+  );
+
+  const updateParams = useCallback(
+    (params: Record<string, string | null>) => {
+      const url = new URL(window.location.href);
+      Object.entries(params).forEach(([key, value]) => {
+        if (value) {
+          url.searchParams.set(key, value);
+        } else {
+          url.searchParams.delete(key);
+        }
+      });
+      router.push(url.pathname + url.search);
+    },
+    [router],
   );
 
   const currentTitle = useMemo(
@@ -68,29 +87,17 @@ export default function Home() {
     }
 
     return items;
-  }, [selectedFleet, selectedGroup]);
+  }, [selectedFleet, selectedGroup, updateParams]);
 
   useEffect(() => {
     setBreadcrumbs(pathItems, currentTitle);
   }, [pathItems, currentTitle, setBreadcrumbs]);
 
-  const updateParams = (params: Record<string, string | null>) => {
-    const url = new URL(window.location.href);
-    Object.entries(params).forEach(([key, value]) => {
-      if (value) {
-        url.searchParams.set(key, value);
-      } else {
-        url.searchParams.delete(key);
-      }
-    });
-    router.push(url.pathname + url.search);
-  };
-
   return (
     <main className='flex-1 overflow-hidden bg-background/50 grid-pattern'>
       {step === "fleet" && (
         <FleetSelector
-          fleets={seedHierarchy.fleets}
+          fleets={data.fleets}
           onSelect={(id) =>
             updateParams({ fleet: id, group: null, vessel: null })
           }
@@ -103,7 +110,7 @@ export default function Home() {
           onBack={() =>
             updateParams({ fleet: null, group: null, vessel: null })
           }
-          onSelect={(id) => {
+          onSelect={(id: string) => {
             const group = selectedFleet.groups.find((g) => g.id === id);
             if (group?.vessels.length === 1) {
               updateParams({ group: id, vessel: group.vessels[0].id });
@@ -149,5 +156,13 @@ export default function Home() {
         />
       )}
     </main>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading Dashboard...</div>}>
+      <DashboardContent />
+    </Suspense>
   );
 }

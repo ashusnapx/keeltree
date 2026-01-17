@@ -23,8 +23,48 @@
                   "dueDate": "2026-02-15"
                 }
               ],
-              "inventory": [],
-              "runningHours": [],
+              "inventory": [
+                {
+                  "id": "i-1",
+                  "name": "Cylinder Liner",
+                  "qty": 12,
+                  "min": 5,
+                  "unit": "pcs",
+                  "location": "Engine Store"
+                },
+                {
+                  "id": "i-2",
+                  "name": "Piston Ring Set",
+                  "qty": 4,
+                  "min": 8,
+                  "unit": "sets",
+                  "location": "Aft Deck"
+                },
+                {
+                  "id": "i-3",
+                  "name": "Lubricating Oil",
+                  "qty": 450,
+                  "min": 200,
+                  "unit": "L",
+                  "location": "Main Engine Room"
+                }
+              ],
+              "runningHours": [
+                {
+                  "id": "rh-1",
+                  "component": "Main Engine",
+                  "current": 12450,
+                  "max": 15000,
+                  "status": "Healthy"
+                },
+                {
+                  "id": "rh-2",
+                  "component": "Aux Generator 1",
+                  "current": 7890,
+                  "max": 8000,
+                  "status": "Due Soon"
+                }
+              ],
               "hierarchy": {
                 "id": "root-1-1",
                 "name": "Equipments",
@@ -64,6 +104,9 @@
               "status": "Active",
               "fuel": "80%",
               "speed": "15kn",
+              "maintenance": [],
+              "inventory": [],
+              "runningHours": [],
               "hierarchy": {
                 "id": "r-ex",
                 "name": "Equipments",
@@ -77,6 +120,9 @@
               "status": "Active",
               "fuel": "75%",
               "speed": "14kn",
+              "maintenance": [],
+              "inventory": [],
+              "runningHours": [],
               "hierarchy": {
                 "id": "r-ex2",
                 "name": "Equipments",
@@ -111,6 +157,9 @@
               "id": "vs-1",
               "name": "Titan 1",
               "status": "Active",
+              "maintenance": [],
+              "inventory": [],
+              "runningHours": [],
               "hierarchy": {
                 "id": "ts1",
                 "name": "Equipments",
@@ -122,6 +171,9 @@
               "id": "vs-2",
               "name": "Titan 2",
               "status": "Active",
+              "maintenance": [],
+              "inventory": [],
+              "runningHours": [],
               "hierarchy": {
                 "id": "ts2",
                 "name": "Equipments",
@@ -133,6 +185,9 @@
               "id": "vs-3",
               "name": "Titan 3",
               "status": "Active",
+              "maintenance": [],
+              "inventory": [],
+              "runningHours": [],
               "hierarchy": {
                 "id": "ts3",
                 "name": "Equipments",
@@ -144,6 +199,9 @@
               "id": "vs-4",
               "name": "Titan 4",
               "status": "Active",
+              "maintenance": [],
+              "inventory": [],
+              "runningHours": [],
               "hierarchy": {
                 "id": "ts4",
                 "name": "Equipments",
@@ -155,6 +213,9 @@
               "id": "vs-5",
               "name": "Titan 5",
               "status": "Active",
+              "maintenance": [],
+              "inventory": [],
+              "runningHours": [],
               "hierarchy": {
                 "id": "ts5",
                 "name": "Equipments",
@@ -166,6 +227,9 @@
               "id": "vs-6",
               "name": "Titan 6",
               "status": "Active",
+              "maintenance": [],
+              "inventory": [],
+              "runningHours": [],
               "hierarchy": {
                 "id": "ts6",
                 "name": "Equipments",
@@ -177,6 +241,9 @@
               "id": "vs-7",
               "name": "Titan 7",
               "status": "Active",
+              "maintenance": [],
+              "inventory": [],
+              "runningHours": [],
               "hierarchy": {
                 "id": "ts7",
                 "name": "Equipments",
@@ -188,6 +255,9 @@
               "id": "vs-8",
               "name": "Titan 8",
               "status": "Active",
+              "maintenance": [],
+              "inventory": [],
+              "runningHours": [],
               "hierarchy": {
                 "id": "ts8",
                 "name": "Equipments",
@@ -199,6 +269,9 @@
               "id": "vs-9",
               "name": "Titan 9",
               "status": "Active",
+              "maintenance": [],
+              "inventory": [],
+              "runningHours": [],
               "hierarchy": {
                 "id": "ts9",
                 "name": "Equipments",
@@ -210,6 +283,9 @@
               "id": "vs-10",
               "name": "Titan 10",
               "status": "Active",
+              "maintenance": [],
+              "inventory": [],
+              "runningHours": [],
               "hierarchy": {
                 "id": "ts10",
                 "name": "Equipments",
