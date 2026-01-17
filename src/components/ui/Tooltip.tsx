@@ -57,7 +57,9 @@ export function Tooltip({
   return (
     <div
       className='relative flex items-center'
-      onMouseEnter={() => setIsVisible(true)}
+      onMouseEnter={() => {
+        if (!disabled) setIsVisible(true);
+      }}
       onMouseLeave={() => setIsVisible(false)}
     >
       {children}

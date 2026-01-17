@@ -1,79 +1,107 @@
-# � Keel Tree
+![Keel Tree Banner](file:///Users/ashutoshkumar/.gemini/antigravity/brain/06959bc2-35a7-430d-bbcd-50103253d91a/keel_tree_premium_banner_1768631505531.png)
 
-**Vessel Hierarchy Intelligence & Maritime Engineering Visualization**
+# 🚢 Keel Tree
 
-Keel Tree is a premium, high-performance visualization platform designed for modern maritime operations. It transforms complex vessel equipment data into an intuitive, interactive "Keel-to-Mast" hierarchy, enabling engineers and fleet managers to maintain absolute situational awareness.
+### **Vessel Hierarchy Intelligence & Maritime Engineering Visualization**
 
-![Landing Page](file:///Users/ashutoshkumar/.gemini/antigravity/brain/06959bc2-35a7-430d-bbcd-50103253d91a/keel_tree_apple_hero_1768628310415.png)
-
----
-
-## ✨ Philosophy: Form Meets Function
-
-Most maritime software is clunky and dated. **Keel Tree** breaks that mold by applying "Apple-style" aesthetics—minimalism, glassmorphism, and high-frequency micro-animations—to heavy industrial data.
-
-### 🔑 Key Features
-
-- **🌿 Dynamic Recursive Visualization**: Custom-built horizontal tree layout with smooth expand/collapse logic and recursive branch rendering.
-- **🎨 Categorical Intelligence**: Type-based color coding (Equipment Type, Equipment, Assembly, Component) for instant cognitive mapping.
-- **🔗 Context-Aware Navigation**:
-  - **URL-Based State**: Every selection is reflected in the URL parameters (`?fleet=f1&vessel=v1`).
-  - **Deep-Linking**: Share direct links to specific equipment subgroups.
-  - **Interactive Breadcrumbs**: Dynamic Navbar links that allow jumping across any level of the hierarchy.
-- **🚀 Engineered for Scale**: Efficiently handles massive data sets, including fleets with dozens of divisions and vessels, with zero performance degradation.
-- **🌗 Seamless Synchronization**: Full high-contrast Light and Dark mode support with persistent theme synchronization.
-- **🛠 Dashboard Modules**: Integrated views for Maintenance tracking, Inventory management, Machinery metrics, and Crew roles.
+Keel Tree is a state-of-the-art visualization platform engineered for the modern maritime industry. It transforms massive, multi-layered vessel equipment data into a performant, interactive "Keel-to-Mast" digital twin, allowing technical managers and engineers to navigate complex ship hierarchies with unprecedented clarity.
 
 ---
 
-## 🛠 Tech Stack & Engineering Excellence
+## 🌿 The Experience: Fluid & Precise
 
-This project isn't just a UI—it's a demonstration of modern web engineering best practices.
+Most industrial software is a "grey box" of complexity. **Keel Tree** is built on the philosophy that **clarity is a competitive advantage.**
 
-- **Framework**: [Next.js 15+](https://nextjs.org/) (App Router, Server Components)
-- **Language**: [TypeScript](https://www.typescriptlang.org/) (Strictly typed schemas/interfaces)
-- **Styling**: [Tailwind CSS 4.0](https://tailwindcss.com/) (Atomic CSS, custom design tokens)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/) (Physics-based layout transitions)
-- **State Management**: Next.js URL SearchParams + React Context (Clean, sharable state)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Visuals**: Custom SVGs for tree connectors and glassmorphic panels.
+![Data Flow Abstract](file:///Users/ashutoshkumar/.gemini/antigravity/brain/06959bc2-35a7-430d-bbcd-50103253d91a/keel_tree_data_flow_abstract_1768631534356.png)
+
+### 🌊 Sensory UX
+
+- **Frictionless Navigation**: Physics-based animations ensure every expansion, search, and transition feels natural and expensive.
+- **Glassmorphic Depth**: Layers of blurred transparency give the interface a world-class, premium feel while maintaining a technical focus.
+- **Micro-Interactions**: Hover states, interactive breadcrumbs, and real-time shadows provide constant positive feedback.
 
 ---
 
-## 📐 Architecture
+## ⚡ Engineering Excellence
 
-Keel Tree follows a modular, atomic architecture designed for extensibility.
+Keel Tree is more than a UI; it's a demonstration of high-performance web engineering.
 
-```bash
-src/
-├── app/                    # Next.js App Router (File-based routing)
-├── components/
-│   ├── tree/               # The "Magic": TreeView, Node, and Branch logic
-│   ├── dashboard/          # Fleet/Group selectors and domain modules
-│   ├── layout/             # Sticky Navbar, Sidebar, and Breadcrumb Footer
-│   └── ui/                 # Reusable premium components (GlassPanel, Tooltip)
-├── data/                   # Seed data (Hierarchical JSON)
-├── hooks/                  # Custom logic (Tree search, keyboard nav)
-├── schemas/                # Zod validation for data integrity
-└── types/                  # Unified TypeScript interfaces
+### 1. Robust URL-Driven Navigation Flow
+
+Selection state (Fleet → Division → Vessel) is entirely persisted in the URL. This enables:
+
+- **Zero-Bugs Refresh**: Hard refreshes always return you to the exact node.
+- **Browser Native Navigation**: Full "Back" and "Forward" support for hierarchy traversal.
+- **Deep-Linking**: Direct URLs to specific equipment subgroups for instant sharing.
+
+```mermaid
+graph LR
+    A["URL Search Params"] -->|Hydrate| B["Dashboard Engine"]
+    B -->|Select Fleet| C["Fleet Selector"]
+    C -->|Update URL| A
+    B -->|Select Group| D["Group Selector"]
+    D -->|Update URL| A
+    B -->|Select Vessel| E["Tree Engine"]
+    E -->|Update URL| A
 ```
 
-### 🧠 Performance Optimizations
+### 2. Recursive Visualization Engine
 
-- **Memoized Calculations**: Extensive use of `useMemo` for filtering and path generation to avoid redundant renders on large trees.
-- **Recursive Branching**: Efficient DOM tree construction that only renders visible branches.
-- **URL-as-State**: Eliminating heavy state-sync bugs by using the URL as the single source of truth for the selection engine.
+Built with custom logic for staggering reveals and path preservation.
+
+- **Atomic Components**: Nodes are purely reactive and memoized for 60fps performance on large data sets.
+- **Context-Aware Search**: Automatically expands all parent paths to ensure the search result is never "orphaned."
+
+![Hierarchy Preview](file:///Users/ashutoshkumar/.gemini/antigravity/brain/06959bc2-35a7-430d-bbcd-50103253d91a/dashboard_vessel_hierarchy_1768630601485.png)
 
 ---
 
-## � Getting Started
+## 🛠 Tech Stack
 
-### 1. Prerequisites
+- **Next.js 15+**: App Router for optimized SSR/SSG and client-side steering.
+- **TypeScript**: Strict architecture with Zod-validated data schemas.
+- **Framer Motion**: Production-grade layout animations.
+- **Tailwind CSS 4.0**: Atomic design tokens for categorical node colors.
 
-- Node.js 18.x or higher
-- npm or pnpm
+---
 
-### 2. Installation
+## 📐 System Architecture
+
+![Vessel Vector](file:///Users/ashutoshkumar/.gemini/antigravity/brain/06959bc2-35a7-430d-bbcd-50103253d91a/keel_tree_vessel_vector_1768631520770.png)
+
+```mermaid
+graph TD
+    subgraph Frontend
+        NB["Navbar (Breadcrumbs)"]
+        SB["Interactive Sidebar"]
+        TV["TreeView (Recursive)"]
+        DASH["Dashboard Modules"]
+    end
+
+    subgraph Engine
+        URL["URL State Sync"]
+        SEARCH["Fuzzy Search Engine"]
+        BP["Breadcrumb Provider"]
+    end
+
+    subgraph Data
+        JSON["Seed Hierarchy (JSON)"]
+        SCHEMA["Zod Schemas"]
+    end
+
+    URL --> DASH
+    JSON --> SCHEMA
+    SCHEMA --> TV
+    TV --> BP
+    BP --> NB
+    SEARCH --> TV
+```
+
+---
+
+## 🚀 Deployment & Installation
+
+### 1. Clone & Install
 
 ```bash
 git clone https://github.com/your-username/keeltree.git
@@ -81,18 +109,23 @@ cd keeltree
 npm install
 ```
 
-### 3. Run Development Server
+### 2. Launch Development
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to explore the vessel hierarchy.
+### 3. Production Build
+
+```bash
+npm run build
+npm start
+```
 
 ---
 
-## 💎 Author
+## ⚓ The Promise
 
-**Developed with focus on visual excellence and engineering precision.**
+> "The foundation of a great ship is its keel. The foundation of a great technical operation is its data. Keel Tree brings them together."
 
-> "Visualizing the foundation of modern maritime engineering."
+**Optimized for high-stakes environments where every component counts.**
